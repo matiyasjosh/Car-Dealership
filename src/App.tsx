@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="min-h-screen relative">
       {/* the downlayer */}
-      <div className="w-4/5 h-11/10 bg-emerald-100 absolute z-10"></div>
+      <div className="w-4/5 h-11/10 bg-emerald-100 absolute z-0"></div>
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 mt-7 z-20 relative">
         {/* Logo */}
@@ -47,9 +47,9 @@ function App() {
 
       <div className="flex">
         {/* Main Content */}
-        <div className="flex-1 px-6 py-8 z-20">
-          <div>
-            <div className="ml-46 absolute top-32 left-1/16">
+        <div className="flex-1 px-6 py-8 ">
+          <div className="relative">
+            <div className="ml-46 absolute top-5 left-10">
               <h1 className="text-4xl font-bold text-black mb-2">MERCEDES-AMG.</h1>
               <p className="text-sm text-gray-700 mb-1">
                 The AMG performance
@@ -59,7 +59,7 @@ function App() {
             </div>
 
             {/* Car Image */}
-            <div className="relative mb-5 mt-30">
+            <div className="absolute -top-10 mb-5 mt-30 z-20">
               <img
                 src="/images/car_from_figma.png"
                 alt="Mercedes-AMG White Coupe"
@@ -68,7 +68,7 @@ function App() {
             </div>
 
             {/* Description Text */}
-            <div className="grid grid-cols-2 gap-8 mb-8">
+            <div className="absolute -bottom-160 left-60 grid grid-cols-2 gap-4 mb-8">
               <div>
                 <p className="text-sm text-gray-600">
                   The facelift once again
@@ -90,7 +90,7 @@ function App() {
             </div>
 
             {/* Buy Now Button */}
-            <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg font-medium">
+            <Button className="absolute -bottom-193 left-30 bg-pink-500 hover:bg-pink-600 text-white px-20 py-10 text-lg font-medium">
               BUY NOW &nbsp;&nbsp;&nbsp; 50,113 €
             </Button>
           </div>
@@ -98,19 +98,10 @@ function App() {
 
         {/* Pink Sidebar */}
         <div className="w-105 bg-[#FF5875] text-white absolute z-15 right-1/15">
-          {/* Vertical Text */}
-          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -rotate-90 origin-center">
-            <span className="text-sm font-medium tracking-wider">MERCEDES BENZ</span>
-          </div>
-
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 origin-center">
-            <span className="text-sm font-medium tracking-wider">DEALER LOCATOR</span>
-          </div>
-
-          <div className="p-8 pt-16">
+          <div className="p-18 pt-16 text-black">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">CARS</h2>
-              <p className="text-sm">NEW & USED CARS</p>
+              <h2 className="text-md font-bold mb-2">CARS</h2>
+              <p className="text-xs">NEW & USED CARS</p>
               <div className="w-full h-px bg-black mt-2"></div>
             </div>
 
@@ -118,7 +109,7 @@ function App() {
               <div>
                 <label className="block text-sm font-medium mb-2">MODEL</label>
                 <Select>
-                  <SelectTrigger className="w-full bg-[#FF5875] border-black text-white">
+                  <SelectTrigger className="w-full bg-[#FF5875]">
                     <SelectValue placeholder="MERCEDES BENZ" />
                   </SelectTrigger>
                   <SelectContent>
@@ -132,7 +123,7 @@ function App() {
               <div>
                 <label className="block text-sm font-medium mb-2">TYPE</label>
                 <Select>
-                  <SelectTrigger className="w-full bg-[#FF5875] border-black text-white">
+                  <SelectTrigger className="w-full bg-[#FF5875]">
                     <SelectValue placeholder="AMG CLA COUPE" />
                   </SelectTrigger>
                   <SelectContent>
@@ -146,7 +137,7 @@ function App() {
               <div>
                 <label className="block text-sm font-medium mb-2">PRICE</label>
                 <Select>
-                  <SelectTrigger className="w-full bg-[#FF5875] border-black text-white">
+                  <SelectTrigger className="w-full bg-[#FF5875] border-black">
                     <SelectValue placeholder="ANY TYPE" />
                   </SelectTrigger>
                   <SelectContent>
@@ -161,7 +152,7 @@ function App() {
               <div>
                 <label className="block text-sm font-medium mb-2">NEAR BY</label>
                 <Select>
-                  <SelectTrigger className="w-full bg-[#FF5875] border-black text-white">
+                  <SelectTrigger className="w-full bg-[#FF5875] border-black">
                     <SelectValue placeholder="100 MILES" />
                   </SelectTrigger>
                   <SelectContent>
@@ -176,7 +167,7 @@ function App() {
                 <label className="block text-sm font-medium mb-2">ZIP CODE</label>
                 <Input
                   placeholder="ZIP CODE"
-                  className="w-full bg-[#FF5875] border-black text-white placeholder-white/70"
+                  className="w-full bg-[#FF5875] border-black"
                 />
               </div>
 
